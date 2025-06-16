@@ -39,6 +39,10 @@ trusted_clients =
 
 [octoprint_compat]
 
+[spoolman]
+server = https://spoolman.nimbus.website
+sync_rate = 5
+
 [history]
 
 [update_manager]
