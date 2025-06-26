@@ -1,0 +1,374 @@
+/* Evil Buu Dark Theme for Mainsail */
+
+:root {
+  /* Primary Colors - Evil Buu Palette */
+  --color-primary: #8B4A9C;
+  --color-primary-darken: #6B3A7C;
+  --color-primary-lighten: #AB6ABC;
+  
+  /* Secondary Colors */
+  --color-secondary: #4A148C;
+  --color-secondary-darken: #2A0A6C;
+  --color-secondary-lighten: #6A34AC;
+  
+  /* Background Colors */
+  --color-background: #0D0D0D;
+  --color-surface: #1A1A1A;
+  --color-surface-variant: #2D2D2D;
+  --color-surface-container: #242424;
+  
+  /* Text Colors */
+  --color-on-background: #E8E8E8;
+  --color-on-surface: #FFFFFF;
+  --color-on-surface-variant: #CCCCCC;
+  --color-on-primary: #FFFFFF;
+  --color-on-secondary: #FFFFFF;
+  
+  /* Accent Colors */
+  --color-accent: #8B4A9C;
+  --color-accent-darken: #6B3A7C;
+  --color-accent-lighten: #AB6ABC;
+  
+  /* Status Colors */
+  --color-success: #4CAF50;
+  --color-success-darken: #2E7D32;
+  --color-warning: #FF9800;
+  --color-warning-darken: #F57C00;
+  --color-error: #F44336;
+  --color-error-darken: #D32F2F;
+  --color-info: #8B4A9C;
+  --color-info-darken: #6B3A7C;
+  
+  /* UI Element Colors */
+  --color-border: #444444;
+  --color-border-light: #555555;
+  --color-divider: #333333;
+  --color-hover: rgba(139, 74, 156, 0.1);
+  --color-focus: rgba(139, 74, 156, 0.2);
+  --color-selection: rgba(139, 74, 156, 0.3);
+  
+  /* Shadows */
+  --shadow-light: 0 2px 4px rgba(139, 74, 156, 0.1);
+  --shadow-medium: 0 4px 8px rgba(139, 74, 156, 0.15);
+  --shadow-heavy: 0 8px 16px rgba(139, 74, 156, 0.2);
+  
+  /* Typography */
+  --font-family-primary: 'Inter', 'Roboto', sans-serif;
+  --font-family-mono: 'Fira Code', 'Consolas', monospace;
+  
+  /* Animation */
+  --transition-fast: 0.15s ease;
+  --transition-medium: 0.25s ease;
+  --transition-slow: 0.35s ease;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-family-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.v-navigation-drawer {
+  background-color: var(--color-surface) !important;
+  border-right: 1px solid var(--color-border);
+}
+
+.v-navigation-drawer .v-list-item {
+  color: var(--color-on-surface-variant);
+  transition: var(--transition-fast);
+}
+
+.v-navigation-drawer .v-list-item:hover {
+  background-color: var(--color-hover);
+  color: var(--color-primary);
+}
+
+.v-navigation-drawer .v-list-item--active {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* App Bar */
+.v-app-bar {
+  background-color: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-light);
+}
+
+.v-app-bar .v-toolbar__title {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(139, 74, 156, 0.5);
+}
+
+/* Cards */
+.v-card {
+  background-color: var(--color-surface-container) !important;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition-medium);
+}
+
+.v-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-heavy);
+  transform: translateY(-2px);
+}
+
+.v-card-title {
+  color: var(--color-primary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: 8px;
+}
+
+/* Buttons */
+.v-btn {
+  transition: var(--transition-fast);
+}
+
+.v-btn--primary {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+  box-shadow: 0 0 20px rgba(139, 74, 156, 0.3);
+}
+
+.v-btn--primary:hover {
+  background-color: var(--color-primary-lighten) !important;
+  box-shadow: 0 0 30px rgba(139, 74, 156, 0.5);
+  transform: translateY(-1px);
+}
+
+.v-btn--secondary {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-on-secondary) !important;
+}
+
+.v-btn--secondary:hover {
+  background-color: var(--color-secondary-lighten) !important;
+}
+
+/* Forms */
+.v-text-field {
+  background-color: var(--color-surface-variant);
+  border-radius: 4px;
+}
+
+.v-text-field .v-field__field {
+  color: var(--color-on-surface);
+}
+
+.v-text-field .v-field__outline {
+  border-color: var(--color-border);
+}
+
+.v-text-field:hover .v-field__outline {
+  border-color: var(--color-primary);
+}
+
+.v-text-field--focused .v-field__outline {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(139, 74, 156, 0.2);
+}
+
+/* Tables */
+.v-table {
+  background-color: var(--color-surface-container) !important;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.v-table th {
+  background-color: var(--color-surface-variant);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.v-table td {
+  color: var(--color-on-surface);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.v-table tbody tr:hover {
+  background-color: var(--color-hover);
+}
+
+/* Progress Bars */
+.v-progress-linear {
+  background-color: var(--color-surface-variant) !important;
+}
+
+.v-progress-linear .v-progress-linear__determinate {
+  background-color: var(--color-primary) !important;
+  box-shadow: 0 0 10px rgba(139, 74, 156, 0.5);
+}
+
+/* Chips */
+.v-chip {
+  background-color: var(--color-surface-variant) !important;
+  color: var(--color-on-surface-variant) !important;
+  border: 1px solid var(--color-border);
+}
+
+.v-chip--selected {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+  box-shadow: 0 0 15px rgba(139, 74, 156, 0.4);
+}
+
+/* Dialogs */
+.v-dialog .v-card {
+  background-color: var(--color-surface) !important;
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 40px rgba(139, 74, 156, 0.3);
+}
+
+/* Alerts */
+.v-alert {
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.v-alert--success {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  border-left-color: var(--color-success);
+}
+
+.v-alert--warning {
+  background-color: rgba(255, 152, 0, 0.1) !important;
+  border-left-color: var(--color-warning);
+}
+
+.v-alert--error {
+  background-color: rgba(244, 67, 54, 0.1) !important;
+  border-left-color: var(--color-error);
+}
+
+.v-alert--info {
+  background-color: rgba(139, 74, 156, 0.1) !important;
+  border-left-color: var(--color-info);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-surface-variant);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  transition: var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-lighten);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-selection);
+  color: var(--color-on-primary);
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Custom Evil Buu Glow Effects */
+.evil-glow {
+  box-shadow: 0 0 20px rgba(139, 74, 156, 0.5);
+  animation: evilPulse 2s infinite;
+}
+
+@keyframes evilPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 74, 156, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(139, 74, 156, 0.8);
+  }
+}
+
+/* Temperature colors */
+.temp-gauge {
+  background: linear-gradient(90deg, 
+    var(--color-primary) 0%, 
+    var(--color-secondary) 50%, 
+    var(--color-error) 100%);
+  border-radius: 4px;
+  height: 8px;
+}
+
+/* Status indicators */
+.status-connected {
+  color: var(--color-success);
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.status-disconnected {
+  color: var(--color-error);
+  text-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+.status-printing {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(139, 74, 156, 0.5);
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  /* Additional dark mode specific overrides if needed */
+  .v-application {
+    background-color: var(--color-background) !important;
+    color: var(--color-on-background) !important;
+  }
+}
+
+/* Print bed visualization */
+.bed-mesh {
+  background: radial-gradient(circle, 
+    var(--color-primary) 0%, 
+    var(--color-secondary) 50%, 
+    var(--color-background) 100%);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+}
+
+/* File browser */
+.file-browser .v-list-item {
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+.file-browser .v-list-item:hover {
+  background-color: var(--color-hover);
+  border-left: 3px solid var(--color-primary);
+}
+
+/* Console/Terminal */
+.console {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-family: var(--font-family-mono);
+  color: var(--color-success);
+  text-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
