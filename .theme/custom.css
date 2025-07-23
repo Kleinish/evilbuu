@@ -1,4 +1,4 @@
-/* Evil Buu Dark Theme for Mainsail */
+/* Evil Buu Dark Theme for Mainsail - Vuetify 3 Compatible */
 
 :root {
   /* Primary Colors - Evil Buu Palette */
@@ -60,242 +60,436 @@
   --transition-fast: 0.15s ease;
   --transition-medium: 0.25s ease;
   --transition-slow: 0.35s ease;
+
+  /* Vuetify 3 CSS Variables Override */
+  --v-theme-background: #0D0D0D;
+  --v-theme-surface: #1A1A1A;
+  --v-theme-surface-variant: #2D2D2D;
+  --v-theme-surface-bright: #242424;
+  --v-theme-on-background: #E8E8E8;
+  --v-theme-on-surface: #FFFFFF;
+  --v-theme-on-surface-variant: #CCCCCC;
+  --v-theme-primary: #8B4A9C;
+  --v-theme-on-primary: #FFFFFF;
+  --v-theme-secondary: #4A148C;
+  --v-theme-on-secondary: #FFFFFF;
+  --v-theme-error: #F44336;
+  --v-theme-on-error: #FFFFFF;
+  --v-theme-warning: #FF9800;
+  --v-theme-on-warning: #000000;
+  --v-theme-info: #8B4A9C;
+  --v-theme-on-info: #FFFFFF;
+  --v-theme-success: #4CAF50;
+  --v-theme-on-success: #FFFFFF;
+  --v-high-emphasis-opacity: 0.87;
+  --v-medium-emphasis-opacity: 0.60;
+  --v-disabled-opacity: 0.38;
 }
 
-/* Global Styles */
-* {
-  box-sizing: border-box;
+/* Global Application Styles */
+.v-application {
+  background-color: var(--color-background) !important;
+  color: var(--color-on-background) !important;
+  font-family: var(--font-family-primary) !important;
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-on-background);
-  font-family: var(--font-family-primary);
-  margin: 0;
-  padding: 0;
+  background-color: var(--color-background) !important;
+  color: var(--color-on-background) !important;
+  font-family: var(--font-family-primary) !important;
 }
 
-/* Navigation */
+/* Navigation Drawer - Vuetify 3 */
 .v-navigation-drawer {
-  background-color: var(--color-surface) !important;
-  border-right: 1px solid var(--color-border);
+  background: var(--color-surface) !important;
+  border-right: 1px solid var(--color-border) !important;
+}
+
+.v-navigation-drawer .v-list {
+  background: transparent !important;
 }
 
 .v-navigation-drawer .v-list-item {
-  color: var(--color-on-surface-variant);
-  transition: var(--transition-fast);
+  color: var(--color-on-surface-variant) !important;
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+  transition: var(--transition-fast) !important;
 }
 
 .v-navigation-drawer .v-list-item:hover {
-  background-color: var(--color-hover);
-  color: var(--color-primary);
+  background-color: var(--color-hover) !important;
+  color: var(--color-primary) !important;
 }
 
 .v-navigation-drawer .v-list-item--active {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
 }
 
-/* App Bar */
+.v-navigation-drawer .v-list-item__title {
+  color: inherit !important;
+}
+
+.v-navigation-drawer .v-list-item .v-icon {
+  color: inherit !important;
+}
+
+/* App Bar - Vuetify 3 */
 .v-app-bar {
-  background-color: var(--color-surface) !important;
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-light);
+  background: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  box-shadow: var(--shadow-light) !important;
 }
 
-.v-app-bar .v-toolbar__title {
-  color: var(--color-primary);
-  font-weight: 600;
-  text-shadow: 0 0 10px rgba(139, 74, 156, 0.5);
+.v-app-bar .v-toolbar-title {
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 10px rgba(139, 74, 156, 0.5) !important;
 }
 
-/* Cards */
+.v-app-bar .v-btn {
+  color: var(--color-on-surface) !important;
+}
+
+.v-app-bar .v-btn:hover {
+  background-color: var(--color-hover) !important;
+}
+
+/* Cards - Vuetify 3 */
 .v-card {
-  background-color: var(--color-surface-container) !important;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  box-shadow: var(--shadow-medium);
-  transition: var(--transition-medium);
+  background: var(--color-surface-container) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-medium) !important;
+  transition: var(--transition-medium) !important;
+  color: var(--color-on-surface) !important;
 }
 
 .v-card:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-heavy);
-  transform: translateY(-2px);
+  border-color: var(--color-primary) !important;
+  box-shadow: var(--shadow-heavy) !important;
+  transform: translateY(-2px) !important;
 }
 
 .v-card-title {
-  color: var(--color-primary);
-  font-weight: 600;
-  border-bottom: 1px solid var(--color-divider);
-  padding-bottom: 8px;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--color-divider) !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 12px !important;
 }
 
-/* Buttons */
+.v-card-subtitle {
+  color: var(--color-on-surface-variant) !important;
+}
+
+.v-card-text {
+  color: var(--color-on-surface) !important;
+}
+
+/* Buttons - Vuetify 3 */
 .v-btn {
-  transition: var(--transition-fast);
+  transition: var(--transition-fast) !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
 }
 
-.v-btn--primary {
-  background-color: var(--color-primary) !important;
+.v-btn--variant-elevated.v-btn--color-primary,
+.v-btn--variant-flat.v-btn--color-primary {
+  background: var(--color-primary) !important;
   color: var(--color-on-primary) !important;
-  box-shadow: 0 0 20px rgba(139, 74, 156, 0.3);
+  box-shadow: 0 0 20px rgba(139, 74, 156, 0.3) !important;
 }
 
-.v-btn--primary:hover {
-  background-color: var(--color-primary-lighten) !important;
-  box-shadow: 0 0 30px rgba(139, 74, 156, 0.5);
-  transform: translateY(-1px);
+.v-btn--variant-elevated.v-btn--color-primary:hover,
+.v-btn--variant-flat.v-btn--color-primary:hover {
+  background: var(--color-primary-lighten) !important;
+  box-shadow: 0 0 30px rgba(139, 74, 156, 0.5) !important;
+  transform: translateY(-1px) !important;
 }
 
-.v-btn--secondary {
-  background-color: var(--color-secondary) !important;
+.v-btn--variant-elevated.v-btn--color-secondary,
+.v-btn--variant-flat.v-btn--color-secondary {
+  background: var(--color-secondary) !important;
   color: var(--color-on-secondary) !important;
 }
 
-.v-btn--secondary:hover {
-  background-color: var(--color-secondary-lighten) !important;
+.v-btn--variant-outlined {
+  border-color: var(--color-border) !important;
+  color: var(--color-primary) !important;
 }
 
-/* Forms */
-.v-text-field {
-  background-color: var(--color-surface-variant);
-  border-radius: 4px;
+.v-btn--variant-outlined:hover {
+  background: var(--color-hover) !important;
+  border-color: var(--color-primary) !important;
 }
 
-.v-text-field .v-field__field {
-  color: var(--color-on-surface);
+.v-btn--variant-text {
+  color: var(--color-primary) !important;
 }
 
-.v-text-field .v-field__outline {
-  border-color: var(--color-border);
+.v-btn--variant-text:hover {
+  background: var(--color-hover) !important;
 }
 
-.v-text-field:hover .v-field__outline {
-  border-color: var(--color-primary);
+/* Text Fields - Vuetify 3 */
+.v-field {
+  background: var(--color-surface-variant) !important;
+  border-radius: 8px !important;
 }
 
-.v-text-field--focused .v-field__outline {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(139, 74, 156, 0.2);
+.v-field--variant-filled .v-field__field {
+  background: var(--color-surface-variant) !important;
+  color: var(--color-on-surface) !important;
 }
 
-/* Tables */
-.v-table {
-  background-color: var(--color-surface-container) !important;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+.v-field--variant-outlined .v-field__outline {
+  border-color: var(--color-border) !important;
 }
 
-.v-table th {
-  background-color: var(--color-surface-variant);
-  color: var(--color-primary);
-  font-weight: 600;
-  border-bottom: 2px solid var(--color-primary);
+.v-field--variant-outlined:hover .v-field__outline {
+  border-color: var(--color-primary) !important;
 }
 
-.v-table td {
-  color: var(--color-on-surface);
-  border-bottom: 1px solid var(--color-divider);
+.v-field--variant-outlined.v-field--focused .v-field__outline {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(139, 74, 156, 0.2) !important;
 }
 
-.v-table tbody tr:hover {
-  background-color: var(--color-hover);
+.v-field__input {
+  color: var(--color-on-surface) !important;
+}
+
+.v-label {
+  color: var(--color-on-surface-variant) !important;
+}
+
+.v-field--focused .v-label {
+  color: var(--color-primary) !important;
+}
+
+/* Select Fields */
+.v-select .v-field {
+  background: var(--color-surface-variant) !important;
+}
+
+.v-select__selection {
+  color: var(--color-on-surface) !important;
+}
+
+/* Menus and Overlays */
+.v-overlay__content {
+  background: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-heavy) !important;
+}
+
+.v-menu .v-list {
+  background: var(--color-surface) !important;
+}
+
+.v-menu .v-list-item {
+  color: var(--color-on-surface) !important;
+}
+
+.v-menu .v-list-item:hover {
+  background: var(--color-hover) !important;
+}
+
+/* Data Tables - Vuetify 3 */
+.v-data-table {
+  background: var(--color-surface-container) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.v-data-table__thead {
+  background: var(--color-surface-variant) !important;
+}
+
+.v-data-table-header__content {
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+}
+
+.v-data-table__td {
+  color: var(--color-on-surface) !important;
+  border-bottom: 1px solid var(--color-divider) !important;
+}
+
+.v-data-table__tr:hover {
+  background: var(--color-hover) !important;
 }
 
 /* Progress Bars */
 .v-progress-linear {
-  background-color: var(--color-surface-variant) !important;
+  background: var(--color-surface-variant) !important;
+  border-radius: 4px !important;
 }
 
-.v-progress-linear .v-progress-linear__determinate {
-  background-color: var(--color-primary) !important;
-  box-shadow: 0 0 10px rgba(139, 74, 156, 0.5);
+.v-progress-linear__determinate {
+  background: var(--color-primary) !important;
+  box-shadow: 0 0 10px rgba(139, 74, 156, 0.5) !important;
 }
 
 /* Chips */
 .v-chip {
-  background-color: var(--color-surface-variant) !important;
+  background: var(--color-surface-variant) !important;
   color: var(--color-on-surface-variant) !important;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border) !important;
+  border-radius: 16px !important;
 }
 
-.v-chip--selected {
-  background-color: var(--color-primary) !important;
+.v-chip--variant-elevated {
+  background: var(--color-surface-variant) !important;
+}
+
+.v-chip--variant-tonal {
+  background: var(--color-primary) !important;
   color: var(--color-on-primary) !important;
-  box-shadow: 0 0 15px rgba(139, 74, 156, 0.4);
+  box-shadow: 0 0 15px rgba(139, 74, 156, 0.4) !important;
 }
 
 /* Dialogs */
 .v-dialog .v-card {
-  background-color: var(--color-surface) !important;
-  border: 2px solid var(--color-primary);
-  box-shadow: 0 0 40px rgba(139, 74, 156, 0.3);
+  background: var(--color-surface) !important;
+  border: 2px solid var(--color-primary) !important;
+  box-shadow: 0 0 40px rgba(139, 74, 156, 0.3) !important;
+}
+
+.v-overlay__scrim {
+  background: rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Alerts */
 .v-alert {
-  border-radius: 8px;
-  border-left: 4px solid;
+  border-radius: 8px !important;
+  border-left: 4px solid !important;
 }
 
-.v-alert--success {
-  background-color: rgba(76, 175, 80, 0.1) !important;
-  border-left-color: var(--color-success);
+.v-alert--variant-tonal.v-alert--type-success {
+  background: rgba(76, 175, 80, 0.1) !important;
+  border-left-color: var(--color-success) !important;
+  color: var(--color-success) !important;
 }
 
-.v-alert--warning {
-  background-color: rgba(255, 152, 0, 0.1) !important;
-  border-left-color: var(--color-warning);
+.v-alert--variant-tonal.v-alert--type-warning {
+  background: rgba(255, 152, 0, 0.1) !important;
+  border-left-color: var(--color-warning) !important;
+  color: var(--color-warning) !important;
 }
 
-.v-alert--error {
-  background-color: rgba(244, 67, 54, 0.1) !important;
-  border-left-color: var(--color-error);
+.v-alert--variant-tonal.v-alert--type-error {
+  background: rgba(244, 67, 54, 0.1) !important;
+  border-left-color: var(--color-error) !important;
+  color: var(--color-error) !important;
 }
 
-.v-alert--info {
-  background-color: rgba(139, 74, 156, 0.1) !important;
-  border-left-color: var(--color-info);
+.v-alert--variant-tonal.v-alert--type-info {
+  background: rgba(139, 74, 156, 0.1) !important;
+  border-left-color: var(--color-info) !important;
+  color: var(--color-info) !important;
+}
+
+/* Tabs */
+.v-tabs {
+  background: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+.v-tab {
+  color: var(--color-on-surface-variant) !important;
+  transition: var(--transition-fast) !important;
+}
+
+.v-tab:hover {
+  color: var(--color-primary) !important;
+  background: var(--color-hover) !important;
+}
+
+.v-tab--selected {
+  color: var(--color-primary) !important;
+  background: var(--color-hover) !important;
+}
+
+.v-tab-item {
+  background: var(--color-surface) !important;
+}
+
+/* Expansion Panels */
+.v-expansion-panels {
+  background: transparent !important;
+}
+
+.v-expansion-panel {
+  background: var(--color-surface-container) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.v-expansion-panel-title {
+  color: var(--color-on-surface) !important;
+  background: var(--color-surface-variant) !important;
+}
+
+.v-expansion-panel-title:hover {
+  background: var(--color-hover) !important;
+}
+
+.v-expansion-panel-text {
+  background: var(--color-surface-container) !important;
+  color: var(--color-on-surface) !important;
+}
+
+/* Icons */
+.v-icon {
+  color: var(--color-primary) !important;
+}
+
+.v-list-item .v-icon {
+  color: inherit !important;
 }
 
 /* Scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 8px !important;
+  height: 8px !important;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-surface-variant);
-  border-radius: 4px;
+  background: var(--color-surface-variant) !important;
+  border-radius: 4px !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
-  border-radius: 4px;
-  transition: var(--transition-fast);
+  background: var(--color-primary) !important;
+  border-radius: 4px !important;
+  transition: var(--transition-fast) !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-primary-lighten);
+  background: var(--color-primary-lighten) !important;
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--color-selection);
-  color: var(--color-on-primary);
+  background: var(--color-selection) !important;
+  color: var(--color-on-primary) !important;
 }
 
 /* Focus styles */
-*:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+*:focus-visible {
+  outline: 2px solid var(--color-primary) !important;
+  outline-offset: 2px !important;
 }
 
 /* Custom Evil Buu Glow Effects */
 .evil-glow {
-  box-shadow: 0 0 20px rgba(139, 74, 156, 0.5);
-  animation: evilPulse 2s infinite;
+  box-shadow: 0 0 20px rgba(139, 74, 156, 0.5) !important;
+  animation: evilPulse 2s infinite !important;
 }
 
 @keyframes evilPulse {
@@ -307,68 +501,122 @@ body {
   }
 }
 
-/* Temperature colors */
+/* Temperature Gauge Styling */
 .temp-gauge {
   background: linear-gradient(90deg, 
     var(--color-primary) 0%, 
     var(--color-secondary) 50%, 
-    var(--color-error) 100%);
-  border-radius: 4px;
-  height: 8px;
+    var(--color-error) 100%) !important;
+  border-radius: 4px !important;
+  height: 8px !important;
 }
 
-/* Status indicators */
+/* Status Indicators */
 .status-connected {
-  color: var(--color-success);
-  text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  color: var(--color-success) !important;
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.5) !important;
 }
 
 .status-disconnected {
-  color: var(--color-error);
-  text-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+  color: var(--color-error) !important;
+  text-shadow: 0 0 10px rgba(244, 67, 54, 0.5) !important;
 }
 
 .status-printing {
-  color: var(--color-primary);
-  text-shadow: 0 0 10px rgba(139, 74, 156, 0.5);
+  color: var(--color-primary) !important;
+  text-shadow: 0 0 10px rgba(139, 74, 156, 0.5) !important;
 }
 
-/* Dark mode compatibility */
-@media (prefers-color-scheme: dark) {
-  /* Additional dark mode specific overrides if needed */
-  .v-application {
-    background-color: var(--color-background) !important;
-    color: var(--color-on-background) !important;
-  }
-}
-
-/* Print bed visualization */
+/* Print Bed Visualization */
 .bed-mesh {
   background: radial-gradient(circle, 
     var(--color-primary) 0%, 
     var(--color-secondary) 50%, 
-    var(--color-background) 100%);
-  border: 2px solid var(--color-primary);
-  border-radius: 8px;
+    var(--color-background) 100%) !important;
+  border: 2px solid var(--color-primary) !important;
+  border-radius: 8px !important;
 }
 
-/* File browser */
+/* File Browser */
 .file-browser .v-list-item {
-  border-radius: 4px;
-  margin: 2px 0;
+  border-radius: 8px !important;
+  margin: 2px 8px !important;
 }
 
 .file-browser .v-list-item:hover {
-  background-color: var(--color-hover);
-  border-left: 3px solid var(--color-primary);
+  background: var(--color-hover) !important;
+  border-left: 3px solid var(--color-primary) !important;
 }
 
 /* Console/Terminal */
 .console {
-  background-color: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  font-family: var(--font-family-mono);
-  color: var(--color-success);
-  text-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  background: var(--color-background) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  font-family: var(--font-family-mono) !important;
+  color: var(--color-success) !important;
+  text-shadow: 0 0 5px rgba(76, 175, 80, 0.3) !important;
+  padding: 16px !important;
+}
+
+.console .console-line {
+  color: var(--color-success) !important;
+  font-family: var(--font-family-mono) !important;
+}
+
+/* Mainsail Specific Classes */
+.webcam-container {
+  border: 2px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  background: var(--color-surface-container) !important;
+}
+
+.webcam-container:hover {
+  border-color: var(--color-primary) !important;
+}
+
+/* Temperature Cards */
+.temperature-card {
+  background: var(--color-surface-container) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+.temperature-card .v-card-title {
+  color: var(--color-primary) !important;
+}
+
+/* Print Progress */
+.print-progress {
+  background: var(--color-surface-container) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--color-surface) !important;
+  border-right: 1px solid var(--color-border) !important;
+}
+
+/* Main Content */
+.main-content {
+  background: var(--color-background) !important;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+  .v-card {
+    margin: 8px !important;
+  }
+  
+  .v-navigation-drawer {
+    background: var(--color-surface) !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border: #666666;
+    --color-primary: #9F5BAE;
+  }
 }
